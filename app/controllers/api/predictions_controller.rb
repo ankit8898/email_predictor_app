@@ -1,11 +1,6 @@
 module Api
   class PredictionsController < ApplicationController
 
-
-    #this is temp,
-    skip_before_action :verify_authenticity_token
-    # GET /users
-    # GET /users.json
     def index
       @predictions = Prediction.all
       render json: @predictions, each_serializer: PredictionSerializer,root: false
