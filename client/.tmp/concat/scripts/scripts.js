@@ -66,9 +66,11 @@ app.controller('PredictionCtrl', ["$scope", "Prediction", "Dataset", function ($
         $scope.prediction = {}
         if (result.message === 'success') {
           $scope.success = true
+          $scope.error   =  false
         }
         else {
           $scope.error_message = result.message
+          $scope.success = false
           $scope.error =  true
         }
 
@@ -96,7 +98,8 @@ app.service('Prediction', ["Restangular", function Prediction(Restangular) {
     }
 
   this.create = function(prediction) {
-    return baseUrl.post(prediction);
+    var name = prediction.first_name + ' ' +  prediction.last_name
+    return baseUrl.post({name:  name,  company: prediction.company});
   };
 
   }]);
