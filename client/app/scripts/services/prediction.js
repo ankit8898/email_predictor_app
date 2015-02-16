@@ -17,8 +17,8 @@ app.service('Prediction', function Prediction(Restangular) {
       return baseUrl.getList()
     }
 
-  this.create = function() {
-    return baseUrl.post({name: 'ankit gupta',company: 'tcs'});
+  this.create = function(prediction) {
+    return baseUrl.post(prediction);
   };
 
   });
