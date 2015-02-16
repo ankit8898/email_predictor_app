@@ -39,7 +39,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'email_predictor',path: 'vendor/gems/email_predictor-0.0.1'
+gem 'email_predictor'
 
 group :development, :test do
 
