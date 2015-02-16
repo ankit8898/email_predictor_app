@@ -17,10 +17,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
   //
   // Now set up the states
   $stateProvider
-    .state('users', {
+    .state('predictions', {
       url: "/",
-      templateUrl: "views/users.html",
-      controller: 'UserCtrl'
+      templateUrl: "views/predictions.html",
+      controller: 'PredictionCtrl'
     })
 
 });

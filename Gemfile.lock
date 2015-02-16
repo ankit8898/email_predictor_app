@@ -1,3 +1,8 @@
+PATH
+  remote: vendor/gems/email_predictor-0.0.1
+  specs:
+    email_predictor (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -161,6 +166,7 @@ DEPENDENCIES
   active_model_serializers
   byebug
   coffee-rails (~> 4.1.0)
+  email_predictor!
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
