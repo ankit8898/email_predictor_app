@@ -8,8 +8,24 @@
  *
  * Main module of the application.
  */
-angular
-  .module('webAppEmailPredictorApp', []);
+var app = angular.module('webAppEmailPredictorApp', ['restangular','ui.router']);
+
+
+
+app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+  //
+  // For any unmatched url, redirect to /state1
+  $urlRouterProvider.otherwise("/users");
+  //
+  // Now set up the states
+  $stateProvider
+    .state('users', {
+      url: "/users",
+      templateUrl: "views/users.html",
+      controller: 'UserCtrl'
+    })
+
+}]);
 
 'use strict';
 
@@ -27,4 +43,25 @@ angular.module('webAppEmailPredictorApp')
       'AngularJS',
       'Karma'
     ];
+  }]);
+
+'use strict';
+
+/**
+ * @ngdoc function
+ * @name webAppEmailPredictorApp.controller:UserCtrl
+ * @description
+ * # UserCtrl
+ * Controller of the webAppEmailPredictorApp
+ */
+app.controller('UserCtrl', ["$scope", "Restangular", function ($scope,Restangular) {
+
+  console.log('here')
+
+    var baseAccounts = Restangular.all('api/users');
+
+    baseAccounts.getList().then(function(users) {
+      console.log(users)
+  $scope.users = users;
+});
   }]);

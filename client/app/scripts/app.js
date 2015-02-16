@@ -8,5 +8,21 @@
  *
  * Main module of the application.
  */
-angular
-  .module('webAppEmailPredictorApp', []);
+var app = angular.module('webAppEmailPredictorApp', ['restangular','ui.router']);
+
+
+
+app.config(function($stateProvider, $urlRouterProvider) {
+  //
+  // For any unmatched url, redirect to /state1
+  $urlRouterProvider.otherwise("/users");
+  //
+  // Now set up the states
+  $stateProvider
+    .state('users', {
+      url: "/users",
+      templateUrl: "views/users.html",
+      controller: 'UserCtrl'
+    })
+
+});
