@@ -10,17 +10,15 @@
  */
 var app = angular.module('webAppEmailPredictorApp', ['restangular','ui.router']);
 
-
-
 app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/users");
+  $urlRouterProvider.otherwise("/");
   //
   // Now set up the states
   $stateProvider
     .state('users', {
-      url: "/users",
+      url: "/",
       templateUrl: "views/users.html",
       controller: 'UserCtrl'
     })
