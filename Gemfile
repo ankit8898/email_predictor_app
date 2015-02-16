@@ -8,6 +8,7 @@ gem 'rails', '4.2.0'
 group :production do
 
   gem 'pg'
+  gem 'rails_12factor'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
