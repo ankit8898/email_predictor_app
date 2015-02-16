@@ -60,4 +60,7 @@ describe EmailPredictor::Predictor do
       expect(subject.message).to eq("Prediction cannot be done for Barack Obama as we don't have any historical data for whitehouse company.")
     end
   end
+
+  describe  "Handle when wrong parameters are probi" do
+  end
 end

@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.email       = 'ankit.gupta8898@gmail.com'
   s.files       = [
     "lib/email_predictor/data_analyser.rb",
+    "lib/email_predictor/base.rb",
     "lib/email_predictor/predictor.rb",
     "lib/email_predictor/rules.rb",
     "lib/email_predictor.rb"
@@ -18,7 +19,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec','~> 3.2', '>= 3.2.0'
   s.add_development_dependency 'rspec-collection_matchers', '~> 1.1', '>= 1.1.2'
   s.add_development_dependency 'rake', '~> 10.4', '>= 10.4.2'
-  s.add_development_dependency 'awesome_print', '~> 1.6', '>= 1.6.1'
   s.add_development_dependency 'activesupport','~> 4.2', '>= 4.2.0'
   s.post_install_message = "Thanks for installing!"
 end

@@ -36,7 +36,8 @@ module EmailPredictor
     end
 
     def applicable_rules
-      EmailPredictor::DataAnalyser.find(@company).rules
+      data_analyser = EmailPredictor::DataAnalyser.find(@company)
+      data_analyser ? data_analyser.rules : []
     end
   end
 end
