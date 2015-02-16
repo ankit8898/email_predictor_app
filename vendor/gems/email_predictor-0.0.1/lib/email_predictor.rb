@@ -1,0 +1,5 @@
+require 'active_support/inflector'
+require 'email_predictor/base'
+require 'email_predictor/data_analyser'
+require 'email_predictor/predictor'
+require 'email_predictor/rules'
