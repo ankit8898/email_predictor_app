@@ -22,9 +22,11 @@ app.controller('PredictionCtrl', function ($scope,Prediction,Dataset) {
         $scope.prediction = {}
         if (result.message === 'success') {
           $scope.success = true
+          $scope.error   =  false
         }
         else {
           $scope.error_message = result.message
+          $scope.success = false
           $scope.error =  true
         }
 

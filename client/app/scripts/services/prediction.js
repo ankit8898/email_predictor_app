@@ -18,7 +18,8 @@ app.service('Prediction', function Prediction(Restangular) {
     }
 
   this.create = function(prediction) {
-    return baseUrl.post(prediction);
+    var name = prediction.first_name + ' ' +  prediction.last_name
+    return baseUrl.post({name:  name,  company: prediction.company});
   };
 
   });
