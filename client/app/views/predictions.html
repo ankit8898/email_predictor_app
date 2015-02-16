@@ -49,12 +49,10 @@
          <tr>
             <th>Name</th>
             <th>Email id</th>
-            <th>Company</th>
          </tr>
-         <tr>
-            <td>Ankit</td>
-            <td>ankit.g@gupta.com</td>
-            <td>Tata</td>
+         <tr ng-repeat="dataset in datasets">
+            <td>{{dataset.name}}</td>
+            <td>{{dataset.email}}</td>
          </tr>
       </table>
    </div>

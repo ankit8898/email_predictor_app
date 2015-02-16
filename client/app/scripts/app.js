@@ -22,5 +22,4 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "views/predictions.html",
       controller: 'PredictionCtrl'
     })
-
 });
