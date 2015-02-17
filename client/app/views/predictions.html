@@ -18,24 +18,43 @@
   <strong>Oh snap!</strong> {{error_message}}
 </div>
 
-      <form ng-submit="predict(prediction)">
+      <form ng-submit="predict(prediction)" name="prediction">
          <div class="form-group">
             <label for="firstname">First Name</label>
-            <input type="firstname" class="form-control" id="firstname" placeholder="Enter First name" ng-model='prediction.first_name'>
+            <input type="firstname"
+             class="form-control"
+             name='myField'
+             id="firstname"
+             placeholder="Enter First name"
+             ng-model='prediction.first_name'
+             required>
          </div>
          {{prediction.first_name}}
          <div class="form-group">
             <label for="lastname">Last Name</label>
-            <input type="lastname" class="form-control" id="lastname" placeholder="Enter Last name" ng-model='prediction.last_name'>
+            <input type="lastname"
+             class="form-control"
+             id="lastname"
+             placeholder="Enter Last name"
+            ng-model='prediction.last_name'
+            required>
          </div>
          {{prediction.last_name}}
          <div class="form-group">
             <label for="company">Company</label>
-            <input type="company" class="form-control" id="company" placeholder="Enter company eg: google, apple" ng-model='prediction.company'>
+            <input
+            type="company"
+             class="form-control"
+              id="company"
+              placeholder="Enter company eg: google, apple"
+               ng-model='prediction.company'
+               required>
             {{prediction.company}}
          </div>
          <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+      <!-- a generic template of error messages known as "my-custom-messages" -->
    </div>
    <div class="col-xs-6 col-md-4">
       <h3> Past Predictions</h3>
